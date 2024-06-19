@@ -6,28 +6,26 @@
     <title>Amor da Minha Vida</title>
 
     <style>
-
-        body{
+        body {
             background-color: #1E90FF;
         }
 
-        .painel{
+        .painel {
             margin: auto;
             background-color: #0000CD;
-            width: 600px;
-            height: 600px;
+            max-width: 90%; /* Ajuste para telas menores */
+            padding: 20px;
             border-radius: 20px;
             text-align: center;
-            padding-top: 40px;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             box-shadow: 0px 0px 5px;
         }
 
-        h1, h2{
+        h1, h2 {
             color: white;
         }
 
-        #sim{
+        #sim, #nao {
             height: 40px;
             width: 60px;
             background-color: #00BFFF;
@@ -36,30 +34,24 @@
             color: white;
             cursor: pointer;
             box-shadow: 0px 0px 5px;
-            margin-left: -90px;
+            margin: 10px;
         }
 
-        #nao{
-            position: absolute;
-            height: 40px;
-            width: 60px;
-            background-color: #00BFFF;
-            border: 2px solid white;
-            border-radius: 10px;
-            color: white;
-            margin-left: 10px;
-            cursor: pointer;
-            box-shadow: 0px 0px 5px;
-        }
-        
-        img{
+        img {
             margin-top: 15px;
-            height: 290px;
-            width: 460px;
+            max-width: 100%; /* Imagem responsiva */
+            height: auto; /* Para manter proporção */
             border-radius: 10px;
             box-shadow: 0px 0px 5px white;
         }
 
+        @media (max-width: 768px) {
+            /* Estilo específico para telas menores que 768px */
+            .painel {
+                max-width: 100%; /* Ocupa toda a largura disponível */
+                height: auto; /* Altura automática */
+            }
+        }
     </style>
 
 </head>
@@ -78,9 +70,8 @@
     </div>
 
     <script>
-
-        function fuja(){
-            var botaoNao = document.getElementById("nao")
+        function fuja() {
+            var botaoNao = document.getElementById("nao");
 
             var larguraJanela = window.innerWidth;
             var alturaJanela = window.innerHeight;
@@ -94,7 +85,6 @@
             botaoNao.style.left = aleatorioX + "px";
             botaoNao.style.top = aleatorioY + "px";
         }
-
     </script>
 
 </body>
