@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor da Minha Vida</title>
+
+    <style>
+
+        body{
+            background-color: #1E90FF;
+        }
+
+        .painel{
+            margin: auto;
+            background-color: #0000CD;
+            width: 600px;
+            height: 600px;
+            border-radius: 20px;
+            text-align: center;
+            padding-top: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            box-shadow: 0px 0px 5px;
+        }
+
+        h1, h2{
+            color: white;
+        }
+
+        #sim{
+            height: 40px;
+            width: 60px;
+            background-color: #00BFFF;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px;
+            margin-left: -90px;
+        }
+
+        #nao{
+            position: absolute;
+            height: 40px;
+            width: 60px;
+            background-color: #00BFFF;
+            border: 2px solid white;
+            border-radius: 10px;
+            color: white;
+            margin-left: 10px;
+            cursor: pointer;
+            box-shadow: 0px 0px 5px;
+        }
+        
+        img{
+            margin-top: 15px;
+            height: 290px;
+            width: 460px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 5px white;
+        }
+
+    </style>
+
+</head>
+<body>
+    
+    <div class="painel">
+        <h1>Gata, Linda, Maravilhosa, Mulherão, Amor da minha vida, ...</h1>
+
+        <img src="https://66.media.tumblr.com/c55104b044bc82d1dac7223577d82b46/tumblr_mkp3g1CTCd1s6fb4ko1_500.gif" alt="">
+
+        <h2>Você está preparada para essa mensagem???</h2>
+
+        <a href="img/video_amor2.mp4"><button id="sim">SIM!</button></a>
+        <button onmouseover="fuja()" id="nao">NÃO!</button>
+
+    </div>
+
+    <script>
+
+        function fuja(){
+            var botaoNao = document.getElementById("nao")
+
+            var larguraJanela = window.innerWidth;
+            var alturaJanela = window.innerHeight;
+
+            var maxX = larguraJanela - botaoNao.offsetWidth;
+            var maxY = alturaJanela - botaoNao.offsetHeight;
+
+            var aleatorioX = Math.floor(Math.random() * maxX);
+            var aleatorioY = Math.floor(Math.random() * maxY);
+
+            botaoNao.style.left = aleatorioX + "px";
+            botaoNao.style.top = aleatorioY + "px";
+        }
+
+    </script>
+
+</body>
+</html>
